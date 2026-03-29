@@ -1,13 +1,16 @@
 import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
-import { provideHttpClient } from '@angular/common/http'; // <-- IMPORTANTE
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideHttpClient } from '@angular/common/http';
+import { importProvidersFrom } from '@angular/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 export const appConfig: ApplicationConfig = {
-  providers: [
+providers: [
+    provideAnimationsAsync(),
     provideRouter(routes),
-    provideHttpClient(), // <-- AGREGAR ESTO
-    provideAnimationsAsync()
+    provideHttpClient(),
+    importProvidersFrom(MatSnackBarModule)
   ]
 };

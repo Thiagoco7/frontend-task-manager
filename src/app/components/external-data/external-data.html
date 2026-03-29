@@ -1,13 +1,32 @@
-<h3>Datos (API Pública)</h3>
-<div class="grid-container">
+<div class="page-header">
+  <h2><mat-icon>group</mat-icon> Directorio de Usuarios</h2>
+  <p class="subtitle">Datos obtenidos desde la API pública de JSONPlaceholder</p>
+</div>
+
+<div class="user-grid">
   @for (user of usuarios; track user.id) {
-    <mat-card class="user-card">
+    <mat-card class="user-card" style="margin: 15px;">
       <mat-card-header>
+        <div mat-card-avatar class="user-avatar">
+          {{ user.name.charAt(0) }}
+        </div>
         <mat-card-title>{{ user.name }}</mat-card-title>
-        <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+        <mat-card-subtitle>&#64;{{ user.username }}</mat-card-subtitle>
       </mat-card-header>
+
       <mat-card-content>
-        <p>Empresa: {{ user.company.name }}</p>
+        <div class="info-row">
+          <mat-icon> email </mat-icon>
+          <span> {{ user.email }} </span>
+        </div>
+        <div class="info-row">
+          <mat-icon> business </mat-icon>
+          <span> {{ user.company.name }} </span>
+        </div>
+        <div class="info-row">
+          <mat-icon> language </mat-icon>
+          <a [href]="'http://' + user.website" target="_blank"> {{ user.website }} </a>
+        </div>
       </mat-card-content>
     </mat-card>
   }

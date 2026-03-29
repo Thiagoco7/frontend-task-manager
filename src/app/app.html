@@ -1,10 +1,46 @@
-<mat-toolbar color="primary">
-  <span>Administrador de Tareas</span>
-  <span class="spacer"></span>
-  <button mat-button routerLink="/tasks">Mis Tareas</button>
-  <button mat-button routerLink="/external">Usuarios (API Pública)</button>
-</mat-toolbar>
+<div class="app-container">
+  <mat-toolbar color="primary" class="main-toolbar mat-elevation-z6">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="logo">Prueba <small>Tecnica</small></span>
+    <span class="spacer"></span>
+    <button mat-icon-button title="Notificaciones">
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button title="Perfil">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </mat-toolbar>
 
-<main class="main-content">
-  <router-outlet></router-outlet>
-</main>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened class="main-sidenav">
+      <mat-nav-list>
+        <div class="nav-header">
+          <img src="https://ui-avatars.com/api/?name=User&background=random" class="user-avatar">
+          <p class="user-name">Administrador</p>
+        </div>
+        
+        <mat-divider></mat-divider>
+        
+        <a mat-list-item routerLink="/tasks" routerLinkActive="active-link">
+          <mat-icon matListItemIcon>assignment</mat-icon>
+          <span matListItemTitle>Mis Tareas</span>
+        </a>
+        
+        <a mat-list-item routerLink="/external" routerLinkActive="active-link">
+          <mat-icon matListItemIcon>cloud_sync</mat-icon>
+          <span matListItemTitle>API Externa</span>
+        </a>
+
+        <mat-divider></mat-divider>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="content-wrapper">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
