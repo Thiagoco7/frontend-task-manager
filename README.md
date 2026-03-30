@@ -1,59 +1,46 @@
-# FrontendTaskManager
+# 🚀 Administrador de Tareas FullStack
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+Este proyecto es una solución integral para la gestión de tareas, desarrollada como **prueba técnica**. Implementa un ecosistema completo con un Backend en Node.js y un Frontend moderno utilizando **Angular 21** y **Material 3**.
 
-## Development server
+## 📸 Capturas de Pantalla
 
-To start a local development server, run:
+### 🖥️ Dashboard Principal
+<img width="1365" height="640" alt="image" src="https://github.com/user-attachments/assets/9954e8d7-597e-4752-89ac-53bc3854e516" />
+
+*Interfaz con filtrado de estados y colores dinámicos.*
+
+### 👥 Directorio de Usuarios (API Externa)
+<img width="1358" height="635" alt="image" src="https://github.com/user-attachments/assets/b0a6f17a-6e99-49bc-85ee-e3264d555ee0" />
+
+*Consumo de JSONPlaceholder con layout responsivo (CSS Grid).*
+
+---
+
+## 🛠️ Stack Tecnológico
+- **Frontend:** Angular 21, Angular Material 3, SCSS, TypeScript.
+- **Backend:** Node.js, Express.js.
+- **Base de Datos:** MySQL.
+- **Pruebas:** Vitest.
+
+---
+3. Frontend 🔴
+En una nueva terminal, instala las dependencias y levanta el servidor de desarrollo:
+
 
 ```bash
+cd frontend-task-manager
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+📍 La aplicación estará disponible en: http://localhost:4200
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+🧪 Pruebas y Calidad
+Para ejecutar las pruebas unitarias con Vitest:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+✒️ Autor
+Santiago Velasquez
